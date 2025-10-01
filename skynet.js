@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger);
 
-    var frame_count  = 9, offset_value = 100;
+    var frame_count  = 40, offset_value = 190;
 
     gsap.to(".viewer", {
     backgroundPosition: (-offset_value * frame_count * 2) + "px 50%",
