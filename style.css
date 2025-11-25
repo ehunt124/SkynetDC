@@ -63,7 +63,7 @@
     text-decoration: none;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 845px) {
     .scene {
       display: flex;
       flex-flow: column nowrap;
