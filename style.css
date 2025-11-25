@@ -51,10 +51,7 @@
     align-self: left;
   }
 
-  .service-button,
-  .home-button,
-  .contact-button,
-  .linkedin-button {
+  .button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #333;
@@ -86,13 +83,16 @@
       align-self: center;
     }
 
-    .welcome-text,
-    .contact-button {
+    .welcome-text {
+      display: none;
+    }
+
+    #home-button,
+    #dynmap-button {
       display: none;
     }
 
     .buttons {
       align-self: center;
     }
-
   }
