@@ -1,98 +1,300 @@
-  html,
-  body {
-    font-family: Georgia;
-    font-weight: 300;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Georgia;
+  background: white;
+  color: #333;
+  line-height: 1.6
+}
+
+@font-face {
+  font-family: skynet-title;
+  src: url(skynet_font.ttf);
+}
+
+.title {
+  font-size: 2rem;
+  font-family: skynet-title;
+}
+
+.title h1 {
+  text-align: left;
+}
+
+.title h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.text {
+  flex: 1 1 300px;
+  min-width: 280px;
+  font-size: 1.25rem;
+}
+
+.text p + p {
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Welcome Page */
+
+.scene {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+}
+
+.welcome-container {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1;
+  padding: 1rem;
+}
+
+.viewer {
+  height: 657px;
+  width: 380px;
+  background-image: url(skynet_animation.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
+.index-buttons {
+  display: flex;
+  gap: 20px;
+  margin: auto 1rem 0.5rem;
+  align-self: left;
+}
+
+/* About Page */
+
+.about-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Contact Page */
+
+.contact-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-flex {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.contact-text {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  background: #555;
+  transform: translateY(-2px);
+}
+
+.social-icon:active {
+  background: #111;
+  transform: scale(0.95);
+}
+
+/* Services Page */
+
+.services-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.services-grid {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+
+.service-card:active {
+  transform: scale(0.98);
+}
+
+.service-title {
+  font-family: skynet-title;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Mobile Support */
+
+@media (max-width: 845px) {
+  .title {
+    font-size: 1rem;
+    align-self: center;
+  }
+
+  .text {
+    font-size: 0.8rem;
   }
   
-  @font-face {
-    font-family: skynet;
-    src: url(skynet_font.ttf);
+  .index-buttons {
+    align-self: center;
   }
+
+  /* Mobile Home */
 
   .scene {
     display: flex;
-    flex-flow: row nowrap;
-    height: 100%;
-    background: white;
+    flex-flow: column nowrap;
   }
 
-  .welcome {
-    display: flex;
-    flex-flow: column wrap;
-    flex: 1;
-    padding: 20px;
-    font-size: 1.2rem;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  .viewer {
+    margin-left: -2rem;
+    align-self: center;
+  }
+
+  /* Mobile About */
+
+  .about-container {
+    margin: 0.5rem 0.5rem;
+  }
+
+  #welcome-text,
+  #dynmap-button {
+    display: none;
+  }
+
+  /* Mobile Contact */
+
+  .contact-container {
+    margin-top: 1rem;
   }
 
   .title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: skynet;
-  }
-  
-  .viewer {
-    height: 657px;
-    width: 380px;
-    background-image: url(skynet_animation.png);
-    background-repeat: no-repeat;
-    background-position: 0 50%;
+    align-self: center;
+    font-size: 1.2rem;
   }
 
-  .buttons {
-    display: flex;
-    gap: 20px;
-    margin-top: auto;
-    margin-bottom: 20px;
-    align-self: left;
+  .contact-flex {
+    flex-direction: column;
   }
 
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.85rem;
   }
 
-  @media (max-width: 845px) {
-    .scene {
-      display: flex;
-      flex-flow: column nowrap;
-      height: 100%;
-      width: 100%;
-    }
-
-    .viewer {
-      height: 100%;
-      margin-left: -30px;
-      align-self: center;
-    }
-
-    .welcome {
-      padding: 0;
-    }
-
-    .title {
-      font-size: 2rem;
-      align-self: center;
-    }
-
-    .welcome-text {
-      display: none;
-    }
-
-    #home-button,
-    #dynmap-button {
-      display: none;
-    }
-
-    .buttons {
-      align-self: center;
-    }
+  .social-link {
+    font-size: 0.75rem;
+    padding: 8px 12px;
   }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  /* Mobile Services */
+  .services-container {
+    margin-top: 1rem;
+  }
+
+  .service-card {
+    max-width: none;
+  }
+
+  .service-description {
+    font-size: 0.85rem;
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+  }
+}

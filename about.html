@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About SkynetDC</title>
+  <link rel="icon" href="skynet-favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="title">
+    <h2>Behind the Animation</h2>
+  </header>
+  <main class="about-container">
+    <section class="text">
+      <p>
+        I wanted to learn some basic animations and create a fun website for my home server 
+        since I had already set up my NAS, a Minecraft server with a 3D map, and a nginx reverse 
+        proxy. I did some research, clicked through some demos, and eventually 
+        stumbled across GSAP as a simple library to learn basic animations.
+      </p>
+      <p>
+        As I was scrolling through the demos of the library on CodePen, I stumbled across 
+        <em><a href="https://codepen.io/GreenSock/pen/mdVEpKK">How to Animate a Coffee Drinking Sprite With ScrollTrigger</a></em> and immediately 
+        thought that a simple, stop-motion style animation would be a great fit for my personal site.
+      </p>
+      <p>
+        To create the animation, I recorded a slow motion video of myself waving in my room 
+        using my Pixel 7 and Open Camera. I used a phone mount attached to an old chair and a light 
+        therapy lamp that I own to take the video in my room as seen in the following photo. I uploaded 
+        this video to my NAS and used VLC media player to take captures every few frames for 
+        the animation. I ended up with 40 captures that I stiched together using 
+        <em><a href="https://imagemagick.org/">ImageMagick</a></em>, a command line tool for image processing.
+      </p>
+    </section>
+    <section class="about-image">
+      <img src="animation_setup.jpg" alt="Behind the scenes animation setup" />
+    </section>
+    <section class="index-buttons">
+      <a href="/" class="button" id="home-button">Home</a>
+      <a href="/services" class="button" id="services-button">Services</a>
+      <a href="/dynmap" class="button" id="dynmap-button">Dynmap</a>
+      <a href="/contact" class="button" id="contact-button">Contact</a>
+    </section>
+  </main>
+</body>
+</html>
