@@ -73,7 +73,14 @@ body {
   background-position: 0 50%;
 }
 
-.index-buttons {
+.index-buttons-center {
+  display: flex;
+  gap: 20px;
+  margin: auto 1rem 0.5rem;
+  align-self: center;
+}
+
+.index-buttons-left {
   display: flex;
   gap: 20px;
   margin: auto 1rem 0.5rem;
@@ -223,7 +230,7 @@ body {
     font-size: 0.8rem;
   }
   
-  .index-buttons {
+  .index-buttons-left {
     align-self: center;
   }
 
